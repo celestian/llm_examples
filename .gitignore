@@ -1,0 +1,25 @@
+# Output directory (except .gitkeep)
+data/output/**
+!data/output/.gitkeep
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Old generated files (if any remain)
+prompt_*.txt
+output_*.txt

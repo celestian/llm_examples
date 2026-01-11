@@ -1,0 +1,39 @@
+You are a named entity recognition system specialized in Czech language.
+
+Task: Extract all person names from the following Czech text.
+
+Rules:
+- Do not modify the input text
+- List only persons (people), not places or institutions
+- Merge different declension forms of the same name (e.g., "Jan Novák", "Janu Novákovi", "Janem Novákem")
+- Czech names have declensions - treat all forms as the same person
+- Return ONLY valid JSON, nothing else
+
+Output format (JSON schema):
+{
+  "persons": [
+    {
+      "canonical": "<canonical name form (nominative case)>",
+      "occurrences": ["<form 1>", "<form 2>", "..."]
+    }
+  ]
+}
+
+Example output:
+{
+  "persons": [
+    {
+      "canonical": "Jan Novák",
+      "occurrences": ["Jan Novák", "Janu Novákovi", "Janem Novákem"]
+    },
+    {
+      "canonical": "Petra Svobodová",
+      "occurrences": ["Petrou Svobodovou", "Petra"]
+    }
+  ]
+}
+
+INPUT TEXT:
+${INPUT_TEXT}
+
+Return ONLY the JSON output, no additional text.

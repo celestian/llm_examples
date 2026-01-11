@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Stage C - Anonymization Result Schema",
+  "description": "Schema for final anonymized text output",
+  "type": "object",
+  "properties": {
+    "original_text": {
+      "type": "string",
+      "description": "Original input text (optional)"
+    },
+    "anonymized_text": {
+      "type": "string",
+      "description": "Text with person names replaced by placeholders"
+    },
+    "mapping": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "placeholder": {
+            "type": "string",
+            "description": "Placeholder used in anonymized text"
+          },
+          "name": {
+            "type": "string",
+            "description": "Original person name"
+          }
+        },
+        "required": ["placeholder", "name"]
+      }
+    }
+  },
+  "required": ["anonymized_text", "mapping"]
+}

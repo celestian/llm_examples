@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Stage A - Person Extraction Schema",
+  "description": "Schema for extracted person names from Czech text",
+  "type": "object",
+  "properties": {
+    "persons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "canonical": {
+            "type": "string",
+            "description": "Canonical form of the person name (nominative case)"
+          },
+          "occurrences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "List of all declension forms found in text"
+          }
+        },
+        "required": ["canonical", "occurrences"]
+      }
+    }
+  },
+  "required": ["persons"]
+}

@@ -1,0 +1,36 @@
+You are a text anonymization system.
+
+Task: Replace all person names in the text with their corresponding placeholders.
+
+Rules:
+- Replace each occurrence of a person name with the corresponding placeholder
+- Use the same placeholder for ALL declension forms of the name
+- Do NOT change any other text (punctuation, spacing, other words)
+- Maintain exact text structure
+
+Mapping (placeholder → name):
+${MAPPING_JSON}
+
+Original text:
+${ORIGINAL_TEXT}
+
+Output format (JSON schema):
+{
+  "original_text": "<exact copy of input>",
+  "anonymized_text": "<text with names replaced by placeholders>",
+  "mapping": [
+    {"placeholder": "[person N]", "name": "<name>"}
+  ]
+}
+
+Example output:
+{
+  "original_text": "Jan Novák se setkal s Petrou.",
+  "anonymized_text": "[person 1] se setkal s [person 2].",
+  "mapping": [
+    {"placeholder": "[person 1]", "name": "Jan Novák"},
+    {"placeholder": "[person 2]", "name": "Petra Svobodová"}
+  ]
+}
+
+Return ONLY the JSON output, no additional text.

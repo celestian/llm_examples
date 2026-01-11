@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Stage B - Mapping Schema",
+  "description": "Schema for person name to placeholder mapping",
+  "type": "object",
+  "properties": {
+    "mapping": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "placeholder": {
+            "type": "string",
+            "pattern": "^\\[person \\d+\\]$",
+            "description": "Placeholder in format [person N]"
+          },
+          "name": {
+            "type": "string",
+            "description": "Canonical person name"
+          }
+        },
+        "required": ["placeholder", "name"]
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["mapping"]
+}

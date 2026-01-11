@@ -1,0 +1,31 @@
+You are a data mapping system.
+
+Task: Create mapping from identified persons to anonymization placeholders.
+
+Rules:
+- Placeholder format: [person N] where N is a number
+- Number according to first occurrence in original text order
+- Return ONLY valid JSON, nothing else
+
+Input data (persons from previous stage):
+${PERSONS_JSON}
+
+Output format (JSON schema):
+{
+  "mapping": [
+    {
+      "placeholder": "[person 1]",
+      "name": "<canonical name>"
+    }
+  ]
+}
+
+Example output:
+{
+  "mapping": [
+    {"placeholder": "[person 1]", "name": "Jan Novák"},
+    {"placeholder": "[person 2]", "name": "Petra Svobodová"}
+  ]
+}
+
+Return ONLY the JSON output, no additional text.
