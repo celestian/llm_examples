@@ -1,0 +1,12 @@
+Rozumím, dává to smysl – s Vaším horizontem „klidně pár měsíců až rok“ jste v dobré pozici počkat si na další generaci / zlevnění a přitom cílit na ligu výkonu RTX 4090.
+
+K Vašemu cíli (34B, Q5_K_M, ~12–20 tok/s):
+• tenhle výkonový profil dnes opravdu reprezentuje 4090 (příp. podobně výkonná 5090 / profi RTX s 24–32 GB VRAM),
+• trh se teď láme – dochází 40xx, nastupují 50xx a nové profi RTX (Blackwell / Ada refresh), takže čekání může znamenat lepší poměr cena/výkon, případně 32GB karty za dnešní „4090 peníze“.
+
+Co bych za sebe udělala teď:
+1) Jasně si zafixovat cíl: „1× GPU, výkon ≈ 4090 na 34B Q5_K_M, 24–32 GB VRAM, rozpočet GPU cca XY tisíc“.
+2) Postavit si zbytek sestavy už teď klidně konzervativně (R9 7900, 128 GB RAM, kvalitní zdroj a case), a GPU jen „zastrčit“, až se objeví vhodný model/akce.
+3) Při výběru za pár měsíců koukat hlavně na: kapacitu VRAM, šířku sběrnice, AI throughput (FP16/BF16/INT8) a TDP (kvůli zdroji).
+
+Jestli chcete, můžu Vám teď navrhnout „future‑proof“ sestavu bez GPU (deska, RAM, zdroj, skříň, SSD), do které později jen vložíte kartu třídy 4090/5090 a budete okamžitě v tom cíli 12–20 tok/s na 34B Q5_K_M. Stačí napsat přibližný rozpočet na zbytek sestavy bez grafiky (např. 30 / 40 / 50 tis. Kč). 
